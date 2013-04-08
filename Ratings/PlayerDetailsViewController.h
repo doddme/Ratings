@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Player;
 @class PlayerDetailsViewController;
 @protocol PlayerDetailsViewControllerDelegate <NSObject>
 
 -(void) playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *) controller;
--(void) playerDetailsViewControllerDidSave:(PlayerDetailsViewController *) controller;
+//-(void) playerDetailsViewControllerDidSave:(PlayerDetailsViewController *) controller;
+-(void) playerDetailsViewController:(PlayerDetailsViewController *) controller didAddPlayer:(Player *)player;
 
 @end
 

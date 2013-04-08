@@ -5,7 +5,7 @@
 //  Created by Michael Dodd on 4/8/13.
 //  Copyright (c) 2013 Michael Dodd. All rights reserved.
 //
-
+#import "Player.h"
 #import "PlayerDetailsViewController.h"
 
 @interface PlayerDetailsViewController ()
@@ -46,7 +46,12 @@
 }
 -(IBAction)done:(id)sender
 {
-    [self.delegate playerDetailsViewControllerDidSave:self];
+    Player *player = [[Player alloc]init];
+    player.name = self.nameTextField.text;
+    player.game = @"Chess";
+    player.rating = 1;
+    
+    [self.delegate playerDetailsViewController:self didAddPlayer:player];
 }
 #pragma mark - Table view delegate
 
