@@ -35,6 +35,7 @@
 		87B196681712426300B17373 /* 5StarsSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965E1712426300B17373 /* 5StarsSmall@2x.png */; };
 		87B196691712426300B17373 /* 5StarsSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965F1712426300B17373 /* 5StarsSmall.png */; };
 		87B1966C1712F73100B17373 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B1966B1712F73100B17373 /* PlayerCell.m */; };
+		87B1966F17131F8F00B17373 /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,10 +59,10 @@
 		87B196491711AFB600B17373 /* Gestures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestures@2x.png"; sourceTree = "<group>"; };
 		87B1964A1711AFB600B17373 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
 		87B1964B1711AFB600B17373 /* Players@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Players@2x.png"; sourceTree = "<group>"; };
-		87B196501711CA8C00B17373 /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersViewController.h; sourceTree = "<group>"; };
-		87B196511711CA8C00B17373 /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersViewController.m; sourceTree = "<group>"; };
-		87B196531711CCD400B17373 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		87B196541711CCD400B17373 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		87B196501711CA8C00B17373 /* PlayersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayersViewController.h; path = ../PlayersViewController.h; sourceTree = "<group>"; };
+		87B196511711CA8C00B17373 /* PlayersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayersViewController.m; path = ../PlayersViewController.m; sourceTree = "<group>"; };
+		87B196531711CCD400B17373 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../Player.h; sourceTree = "<group>"; };
+		87B196541711CCD400B17373 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Player.m; path = ../Player.m; sourceTree = "<group>"; };
 		87B196561712426300B17373 /* 1StarSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1StarSmall.png; path = ../1StarSmall.png; sourceTree = "<group>"; };
 		87B196571712426300B17373 /* 1StarSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1StarSmall@2x.png"; path = "../1StarSmall@2x.png"; sourceTree = "<group>"; };
 		87B196581712426300B17373 /* 2StarsSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2StarsSmall.png; path = ../2StarsSmall.png; sourceTree = "<group>"; };
@@ -72,8 +73,10 @@
 		87B1965D1712426300B17373 /* 4StarsSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4StarsSmall@2x.png"; path = "../4StarsSmall@2x.png"; sourceTree = "<group>"; };
 		87B1965E1712426300B17373 /* 5StarsSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5StarsSmall@2x.png"; path = "../5StarsSmall@2x.png"; sourceTree = "<group>"; };
 		87B1965F1712426300B17373 /* 5StarsSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5StarsSmall.png; path = ../5StarsSmall.png; sourceTree = "<group>"; };
-		87B1966A1712F73100B17373 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
-		87B1966B1712F73100B17373 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
+		87B1966A1712F73100B17373 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerCell.h; path = ../PlayerCell.h; sourceTree = "<group>"; };
+		87B1966B1712F73100B17373 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerCell.m; path = ../PlayerCell.m; sourceTree = "<group>"; };
+		87B1966D17131F8F00B17373 /* PlayerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailsViewController.h; sourceTree = "<group>"; };
+		87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,12 +96,6 @@
 		87129DA71710C91000E2750E = {
 			isa = PBXGroup;
 			children = (
-				87B196501711CA8C00B17373 /* PlayersViewController.h */,
-				87B196531711CCD400B17373 /* Player.h */,
-				87B196541711CCD400B17373 /* Player.m */,
-				87B196511711CA8C00B17373 /* PlayersViewController.m */,
-				87B1966A1712F73100B17373 /* PlayerCell.h */,
-				87B1966B1712F73100B17373 /* PlayerCell.m */,
 				87129DB91710C91000E2750E /* Ratings */,
 				87129DB21710C91000E2750E /* Frameworks */,
 				87129DB11710C91000E2750E /* Products */,
@@ -126,9 +123,17 @@
 		87129DB91710C91000E2750E /* Ratings */ = {
 			isa = PBXGroup;
 			children = (
+				87B196531711CCD400B17373 /* Player.h */,
+				87B196541711CCD400B17373 /* Player.m */,
+				87B196501711CA8C00B17373 /* PlayersViewController.h */,
+				87B196511711CA8C00B17373 /* PlayersViewController.m */,
+				87B1966A1712F73100B17373 /* PlayerCell.h */,
+				87B1966B1712F73100B17373 /* PlayerCell.m */,
 				87129DC21710C91000E2750E /* AppDelegate.h */,
 				87129DC31710C91000E2750E /* AppDelegate.m */,
 				87129DCB1710C91000E2750E /* MainStoryboard.storyboard */,
+				87B1966D17131F8F00B17373 /* PlayerDetailsViewController.h */,
+				87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */,
 				87129DCE1710C91000E2750E /* ViewController.h */,
 				87129DCF1710C91000E2750E /* ViewController.m */,
 				87129DBA1710C91000E2750E /* Supporting Files */,
@@ -250,6 +255,7 @@
 				87B196521711CA8C00B17373 /* PlayersViewController.m in Sources */,
 				87B196551711CCD400B17373 /* Player.m in Sources */,
 				87B1966C1712F73100B17373 /* PlayerCell.m in Sources */,
+				87B1966F17131F8F00B17373 /* PlayerDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
