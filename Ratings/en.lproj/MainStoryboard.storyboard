@@ -61,23 +61,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="DIO-E8-LCd">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="55" id="DIO-E8-LCd" customClass="PlayerCell">
                                 <rect key="frame" x="0.0" y="22" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-5Z-MDu">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="left" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zb-5Z-MDu">
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="Gws-qv-VhZ"/>
                                                 <constraint firstAttribute="width" constant="204" id="UW3-8f-sua"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM1-zI-bi6">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YM1-zI-bi6">
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="197" id="6LZ-bh-2gZ"/>
                                                 <constraint firstAttribute="height" constant="21" id="i73-fw-Zgx"/>
@@ -103,6 +102,11 @@
                                     <constraint firstItem="gnT-GD-acc" firstAttribute="top" secondItem="DIO-E8-LCd" secondAttribute="top" constant="13" id="nZn-Wq-jHQ"/>
                                     <constraint firstItem="YM1-zI-bi6" firstAttribute="top" secondItem="DIO-E8-LCd" secondAttribute="top" constant="27" id="nyP-Y3-VOu"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="gameLabel" destination="YM1-zI-bi6" id="65E-KS-nlh"/>
+                                    <outlet property="nameLabel" destination="4Zb-5Z-MDu" id="spN-64-PnG"/>
+                                    <outlet property="ratingsImageView" destination="gnT-GD-acc" id="d6r-NI-t8U"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -110,11 +114,58 @@
                             <outlet property="delegate" destination="dgV-vH-nAf" id="zpb-fF-GPO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Players" id="1Dd-Et-ISE"/>
+                    <navigationItem key="navigationItem" title="Players" id="1Dd-Et-ISE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tfA-eD-DFm">
+                            <connections>
+                                <segue destination="RPA-Q4-T6C" kind="modal" modalTransitionStyle="flipHorizontal" id="GVi-ad-RkT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fd-sP-sxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="401" y="-154"/>
+            <point key="canvasLocation" x="286" y="-148"/>
+        </scene>
+        <!--Table View Controller - Root View Controller-->
+        <scene sceneID="NU3-OY-GQc">
+            <objects>
+                <tableViewController id="33N-q1-XND" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="CBQ-ft-2Oj">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NCS-jR-xVZ">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="3x0-eR-POf"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jh1-gV-K14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128" y="-148"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X5H-tq-Gsy">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="RPA-Q4-T6C" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Rmx-QD-m0J">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="33N-q1-XND" kind="relationship" relationship="rootViewController" id="HyX-jN-3GF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c5x-3E-Pcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="695" y="-148"/>
         </scene>
         <!--Navigation Controller - Players-->
         <scene sceneID="TI5-bQ-jN5">
@@ -143,6 +194,14 @@
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="PlayerCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayerCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="gameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="ratingsImageView" candidateClass="UIImageView"/>
+            </relationships>
         </class>
         <class className="PlayersViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PlayersViewController.h"/>

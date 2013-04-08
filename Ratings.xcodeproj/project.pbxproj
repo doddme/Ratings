@@ -34,6 +34,7 @@
 		87B196671712426300B17373 /* 4StarsSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965D1712426300B17373 /* 4StarsSmall@2x.png */; };
 		87B196681712426300B17373 /* 5StarsSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965E1712426300B17373 /* 5StarsSmall@2x.png */; };
 		87B196691712426300B17373 /* 5StarsSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965F1712426300B17373 /* 5StarsSmall.png */; };
+		87B1966C1712F73100B17373 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B1966B1712F73100B17373 /* PlayerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,8 @@
 		87B1965D1712426300B17373 /* 4StarsSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4StarsSmall@2x.png"; path = "../4StarsSmall@2x.png"; sourceTree = "<group>"; };
 		87B1965E1712426300B17373 /* 5StarsSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5StarsSmall@2x.png"; path = "../5StarsSmall@2x.png"; sourceTree = "<group>"; };
 		87B1965F1712426300B17373 /* 5StarsSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5StarsSmall.png; path = ../5StarsSmall.png; sourceTree = "<group>"; };
+		87B1966A1712F73100B17373 /* PlayerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCell.h; sourceTree = "<group>"; };
+		87B1966B1712F73100B17373 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +97,8 @@
 				87B196531711CCD400B17373 /* Player.h */,
 				87B196541711CCD400B17373 /* Player.m */,
 				87B196511711CA8C00B17373 /* PlayersViewController.m */,
+				87B1966A1712F73100B17373 /* PlayerCell.h */,
+				87B1966B1712F73100B17373 /* PlayerCell.m */,
 				87129DB91710C91000E2750E /* Ratings */,
 				87129DB21710C91000E2750E /* Frameworks */,
 				87129DB11710C91000E2750E /* Products */,
@@ -244,6 +249,7 @@
 				87129DD01710C91000E2750E /* ViewController.m in Sources */,
 				87B196521711CA8C00B17373 /* PlayersViewController.m in Sources */,
 				87B196551711CCD400B17373 /* Player.m in Sources */,
+				87B1966C1712F73100B17373 /* PlayerCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
