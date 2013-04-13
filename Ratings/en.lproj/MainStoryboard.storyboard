@@ -4,15 +4,15 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Gestures-->
+        <!--Gestures View Controller - Gestures-->
         <scene sceneID="hGc-Kd-ZXu">
             <objects>
-                <viewController id="obR-mD-kvm" sceneMemberID="viewController">
+                <viewController id="obR-mD-kvm" customClass="GesturesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bCe-Tq-k5Q">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Second Tab" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-gV-tce">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Swipe Right for Best Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pyb-gV-tce">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="pVJ-cL-w9K"/>
                                 </constraints>
@@ -20,16 +20,50 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" translatesAutoresizingMaskIntoConstraints="NO" id="73d-2j-J0H">
+                                <items>
+                                    <navigationItem title="Gestures" id="hZ0-j5-WVe"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Double Tap for Worst Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdx-bR-OOn">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Pyb-gV-tce" firstAttribute="centerX" secondItem="bCe-Tq-k5Q" secondAttribute="centerX" type="default" id="5Hg-Ya-ao6"/>
-                            <constraint firstItem="Pyb-gV-tce" firstAttribute="top" secondItem="bCe-Tq-k5Q" secondAttribute="top" constant="45" id="9oj-TZ-lAA"/>
+                            <constraint firstItem="Pyb-gV-tce" firstAttribute="top" secondItem="bCe-Tq-k5Q" secondAttribute="top" constant="52" id="0nU-Wd-gck"/>
+                            <constraint firstItem="73d-2j-J0H" firstAttribute="leading" secondItem="bCe-Tq-k5Q" secondAttribute="leading" type="default" id="2K3-qI-UsE"/>
+                            <constraint firstItem="73d-2j-J0H" firstAttribute="top" secondItem="bCe-Tq-k5Q" secondAttribute="top" type="default" id="7qI-NH-8N8"/>
+                            <constraint firstItem="73d-2j-J0H" firstAttribute="trailing" secondItem="bCe-Tq-k5Q" secondAttribute="trailing" type="default" id="aHP-jy-tKG"/>
+                            <constraint firstItem="73d-2j-J0H" firstAttribute="centerX" secondItem="Pyb-gV-tce" secondAttribute="centerX" type="default" id="peE-ub-hFF"/>
+                            <constraint firstItem="Vdx-bR-OOn" firstAttribute="centerX" secondItem="Pyb-gV-tce" secondAttribute="centerX" type="default" id="qHx-6c-qUo"/>
+                            <constraint firstItem="Vdx-bR-OOn" firstAttribute="top" secondItem="bCe-Tq-k5Q" secondAttribute="top" constant="89" id="zn5-UD-cgJ"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="uVi-pw-hOT" appends="YES" id="vhX-iD-dRA"/>
+                            <outletCollection property="gestureRecognizers" destination="4PA-8g-BJJ" appends="YES" id="Mee-OC-Mcm"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gestures" image="Gestures.png" id="BTH-f5-3aj"/>
+                    <connections>
+                        <outlet property="swipeGestureRecognizer" destination="uVi-pw-hOT" id="u4q-0a-GQ4"/>
+                        <outlet property="tapGestureRecognizer" destination="4PA-8g-BJJ" id="wTz-mP-zjf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JWl-kJ-xHC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="uVi-pw-hOT">
+                    <connections>
+                        <segue destination="Cdx-Rg-g6V" kind="modal" identifier="BestPlayers" id="sxr-do-JUC"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="4PA-8g-BJJ">
+                    <connections>
+                        <segue destination="Cdx-Rg-g6V" kind="modal" identifier="WorstPlayers" id="CLR-Oh-xCQ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-461" y="-431"/>
         </scene>
@@ -215,7 +249,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jh1-gV-K14" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888" y="-1100"/>
+            <point key="canvasLocation" x="996" y="-1464"/>
         </scene>
         <!--Rate Player View Controller-->
         <scene sceneID="2uh-Ty-rvL">
@@ -308,28 +342,69 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="FUm-km-Sqg" firstAttribute="top" secondItem="4UJ-Hl-gEU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8qy-9p-ubQ"/>
+                            <constraint firstAttribute="bottom" secondItem="4UJ-Hl-gEU" secondAttribute="bottom" constant="156" id="2S1-iQ-aW6"/>
+                            <constraint firstAttribute="trailing" secondItem="FUm-km-Sqg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8i4-G0-H16"/>
                             <constraint firstItem="27n-Mc-10Y" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CqP-U6-o7g"/>
                             <constraint firstItem="4UJ-Hl-gEU" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KDb-aE-irL"/>
                             <constraint firstAttribute="trailing" secondItem="4UJ-Hl-gEU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="KEt-Xg-ZO2"/>
-                            <constraint firstItem="xzJ-Nz-ETX" firstAttribute="top" secondItem="mjr-Md-4WS" secondAttribute="top" constant="50" id="LIL-td-RPu"/>
+                            <constraint firstItem="FUm-km-Sqg" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KiB-kr-btd"/>
                             <constraint firstAttribute="trailing" secondItem="xzJ-Nz-ETX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="NBR-eS-RXt"/>
                             <constraint firstAttribute="trailing" secondItem="27n-Mc-10Y" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Trq-Q8-SqY"/>
                             <constraint firstItem="lgj-f1-Ym0" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="XYg-mm-B1G"/>
-                            <constraint firstItem="4UJ-Hl-gEU" firstAttribute="top" secondItem="lgj-f1-Ym0" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="dbJ-Rj-us1"/>
+                            <constraint firstItem="27n-Mc-10Y" firstAttribute="top" secondItem="mjr-Md-4WS" secondAttribute="top" constant="91" id="emU-j8-2H0"/>
                             <constraint firstAttribute="trailing" secondItem="lgj-f1-Ym0" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gSf-i5-Y5m"/>
-                            <constraint firstItem="lgj-f1-Ym0" firstAttribute="top" secondItem="27n-Mc-10Y" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hBA-pG-OYV"/>
                             <constraint firstItem="xzJ-Nz-ETX" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kVj-Rp-EpE"/>
-                            <constraint firstItem="27n-Mc-10Y" firstAttribute="top" secondItem="xzJ-Nz-ETX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mMD-qw-jNs"/>
-                            <constraint firstAttribute="trailing" secondItem="FUm-km-Sqg" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rmd-xC-Rbm"/>
-                            <constraint firstItem="FUm-km-Sqg" firstAttribute="leading" secondItem="mjr-Md-4WS" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="yzr-ft-ObE"/>
+                            <constraint firstItem="xzJ-Nz-ETX" firstAttribute="top" secondItem="mjr-Md-4WS" secondAttribute="top" constant="22" id="kzW-gF-1bH"/>
+                            <constraint firstAttribute="bottom" secondItem="FUm-km-Sqg" secondAttribute="bottom" constant="82" id="lKt-aS-PFY"/>
+                            <constraint firstItem="lgj-f1-Ym0" firstAttribute="top" secondItem="mjr-Md-4WS" secondAttribute="top" constant="161" id="xMQ-jF-3Bn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rPx-ym-VLn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YD-50-zpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="433" y="-418"/>
+            <point key="canvasLocation" x="541" y="-782"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mwh-T8-hJt">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Cdx-Rg-g6V" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cB8-sF-AD9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GpN-fr-nqv" kind="relationship" relationship="rootViewController" id="PiZ-Hf-gQ1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bc5-b1-eZk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70" y="-422"/>
+        </scene>
+        <!--Ranking View Controller - Rankings-->
+        <scene sceneID="lKY-4Z-u1G">
+            <objects>
+                <tableViewController id="GpN-fr-nqv" customClass="RankingViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L1u-gC-XoY">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="GpN-fr-nqv" id="c7q-zr-LyV"/>
+                            <outlet property="delegate" destination="GpN-fr-nqv" id="8aX-9y-HCs"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Rankings" id="lPB-Xh-QHq">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="8zo-ik-xlp">
+                            <connections>
+                                <action selector="done:" destination="GpN-fr-nqv" id="q1F-NC-jAw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3b7-hV-hjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="541" y="-104"/>
         </scene>
         <!--Game Picker View Controller - Choose Game-->
         <scene sceneID="tkd-Kc-Isa">
@@ -366,7 +441,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nYW-J4-Fm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1313" y="-1100"/>
+            <point key="canvasLocation" x="1421" y="-1464"/>
         </scene>
         <!--Navigation Controller - Rate Players-->
         <scene sceneID="X5H-tq-Gsy">
@@ -382,7 +457,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5x-3E-Pcr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="-1100"/>
+            <point key="canvasLocation" x="541" y="-1464"/>
         </scene>
         <!--Navigation Controller - Players-->
         <scene sceneID="TI5-bQ-jN5">
@@ -419,6 +494,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="GVi-ad-RkT"/>
+        <segue reference="zH7-Vq-Q8c"/>
+        <segue reference="CLR-Oh-xCQ"/>
     </inferredMetricsTieBreakers>
 </document>

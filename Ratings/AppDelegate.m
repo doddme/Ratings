@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "Player.h"
 #import "PlayersViewController.h"
+#import "GesturesViewController.h"
+
 
 @implementation AppDelegate
 {
@@ -45,6 +47,9 @@
     UINavigationController *navigationController = [tabBarController viewControllers][0];
     PlayersViewController  *playersViewController = [navigationController viewControllers][0];
     playersViewController.players = _players;
+    
+    GesturesViewController *gesturesViewController = [tabBarController viewControllers][1];
+    gesturesViewController.players = _players;
     
     return YES;
 }
