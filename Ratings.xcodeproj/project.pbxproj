@@ -18,6 +18,17 @@
 		87129DCA1710C91000E2750E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87129DC91710C91000E2750E /* Default-568h@2x.png */; };
 		87129DCD1710C91000E2750E /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87129DCB1710C91000E2750E /* MainStoryboard.storyboard */; };
 		87129DD01710C91000E2750E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87129DCF1710C91000E2750E /* ViewController.m */; };
+		871B07C41718B7DB000CD420 /* RatePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B07C31718B7DB000CD420 /* RatePlayerViewController.m */; };
+		871B07CF1718BC91000CD420 /* 1Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07C51718BC91000CD420 /* 1Star.png */; };
+		871B07D01718BC91000CD420 /* 1Star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07C61718BC91000CD420 /* 1Star@2x.png */; };
+		871B07D11718BC91000CD420 /* 2Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07C71718BC91000CD420 /* 2Stars.png */; };
+		871B07D21718BC91000CD420 /* 2Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07C81718BC91000CD420 /* 2Stars@2x.png */; };
+		871B07D31718BC91000CD420 /* 3Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07C91718BC91000CD420 /* 3Stars.png */; };
+		871B07D41718BC91000CD420 /* 3Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CA1718BC91000CD420 /* 3Stars@2x.png */; };
+		871B07D51718BC91000CD420 /* 4Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CB1718BC91000CD420 /* 4Stars.png */; };
+		871B07D61718BC91000CD420 /* 4Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CC1718BC91000CD420 /* 4Stars@2x.png */; };
+		871B07D71718BC91000CD420 /* 5Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CD1718BC91000CD420 /* 5Stars@2x.png */; };
+		871B07D81718BC91000CD420 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CE1718BC91000CD420 /* 5Stars.png */; };
 		87B1964C1711AFB600B17373 /* Gestures.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B196481711AFB600B17373 /* Gestures.png */; };
 		87B1964D1711AFB600B17373 /* Gestures@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B196491711AFB600B17373 /* Gestures@2x.png */; };
 		87B1964E1711AFB600B17373 /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1964A1711AFB600B17373 /* Players.png */; };
@@ -36,6 +47,7 @@
 		87B196691712426300B17373 /* 5StarsSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1965F1712426300B17373 /* 5StarsSmall.png */; };
 		87B1966C1712F73100B17373 /* PlayerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B1966B1712F73100B17373 /* PlayerCell.m */; };
 		87B1966F17131F8F00B17373 /* PlayerDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */; };
+		87B196721714CF7500B17373 /* GamePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87B196711714CF7500B17373 /* GamePickerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +67,18 @@
 		87129DCC1710C91000E2750E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		87129DCE1710C91000E2750E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		87129DCF1710C91000E2750E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		871B07C21718B7DB000CD420 /* RatePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RatePlayerViewController.h; sourceTree = "<group>"; };
+		871B07C31718B7DB000CD420 /* RatePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RatePlayerViewController.m; sourceTree = "<group>"; };
+		871B07C51718BC91000CD420 /* 1Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1Star.png; path = ../1Star.png; sourceTree = "<group>"; };
+		871B07C61718BC91000CD420 /* 1Star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1Star@2x.png"; path = "../1Star@2x.png"; sourceTree = "<group>"; };
+		871B07C71718BC91000CD420 /* 2Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2Stars.png; path = ../2Stars.png; sourceTree = "<group>"; };
+		871B07C81718BC91000CD420 /* 2Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2Stars@2x.png"; path = "../2Stars@2x.png"; sourceTree = "<group>"; };
+		871B07C91718BC91000CD420 /* 3Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3Stars.png; path = ../3Stars.png; sourceTree = "<group>"; };
+		871B07CA1718BC91000CD420 /* 3Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3Stars@2x.png"; path = "../3Stars@2x.png"; sourceTree = "<group>"; };
+		871B07CB1718BC91000CD420 /* 4Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4Stars.png; path = ../4Stars.png; sourceTree = "<group>"; };
+		871B07CC1718BC91000CD420 /* 4Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4Stars@2x.png"; path = "../4Stars@2x.png"; sourceTree = "<group>"; };
+		871B07CD1718BC91000CD420 /* 5Stars@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "5Stars@2x.png"; path = "../5Stars@2x.png"; sourceTree = "<group>"; };
+		871B07CE1718BC91000CD420 /* 5Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5Stars.png; path = ../5Stars.png; sourceTree = "<group>"; };
 		87B196481711AFB600B17373 /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
 		87B196491711AFB600B17373 /* Gestures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestures@2x.png"; sourceTree = "<group>"; };
 		87B1964A1711AFB600B17373 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
@@ -77,6 +101,8 @@
 		87B1966B1712F73100B17373 /* PlayerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerCell.m; path = ../PlayerCell.m; sourceTree = "<group>"; };
 		87B1966D17131F8F00B17373 /* PlayerDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerDetailsViewController.h; sourceTree = "<group>"; };
 		87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerDetailsViewController.m; sourceTree = "<group>"; };
+		87B196701714CF7400B17373 /* GamePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamePickerViewController.h; sourceTree = "<group>"; };
+		87B196711714CF7500B17373 /* GamePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamePickerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +122,8 @@
 		87129DA71710C91000E2750E = {
 			isa = PBXGroup;
 			children = (
+				871B07C21718B7DB000CD420 /* RatePlayerViewController.h */,
+				871B07C31718B7DB000CD420 /* RatePlayerViewController.m */,
 				87129DB91710C91000E2750E /* Ratings */,
 				87129DB21710C91000E2750E /* Frameworks */,
 				87129DB11710C91000E2750E /* Products */,
@@ -127,6 +155,8 @@
 				87B196541711CCD400B17373 /* Player.m */,
 				87B196501711CA8C00B17373 /* PlayersViewController.h */,
 				87B196511711CA8C00B17373 /* PlayersViewController.m */,
+				87B196701714CF7400B17373 /* GamePickerViewController.h */,
+				87B196711714CF7500B17373 /* GamePickerViewController.m */,
 				87B1966A1712F73100B17373 /* PlayerCell.h */,
 				87B1966B1712F73100B17373 /* PlayerCell.m */,
 				87129DC21710C91000E2750E /* AppDelegate.h */,
@@ -155,6 +185,16 @@
 				87B196491711AFB600B17373 /* Gestures@2x.png */,
 				87B1964A1711AFB600B17373 /* Players.png */,
 				87B1964B1711AFB600B17373 /* Players@2x.png */,
+				871B07C51718BC91000CD420 /* 1Star.png */,
+				871B07C61718BC91000CD420 /* 1Star@2x.png */,
+				871B07C71718BC91000CD420 /* 2Stars.png */,
+				871B07C81718BC91000CD420 /* 2Stars@2x.png */,
+				871B07C91718BC91000CD420 /* 3Stars.png */,
+				871B07CA1718BC91000CD420 /* 3Stars@2x.png */,
+				871B07CB1718BC91000CD420 /* 4Stars.png */,
+				871B07CC1718BC91000CD420 /* 4Stars@2x.png */,
+				871B07CD1718BC91000CD420 /* 5Stars@2x.png */,
+				871B07CE1718BC91000CD420 /* 5Stars.png */,
 				87B196561712426300B17373 /* 1StarSmall.png */,
 				87B196571712426300B17373 /* 1StarSmall@2x.png */,
 				87B196581712426300B17373 /* 2StarsSmall.png */,
@@ -239,6 +279,16 @@
 				87B196671712426300B17373 /* 4StarsSmall@2x.png in Resources */,
 				87B196681712426300B17373 /* 5StarsSmall@2x.png in Resources */,
 				87B196691712426300B17373 /* 5StarsSmall.png in Resources */,
+				871B07CF1718BC91000CD420 /* 1Star.png in Resources */,
+				871B07D01718BC91000CD420 /* 1Star@2x.png in Resources */,
+				871B07D11718BC91000CD420 /* 2Stars.png in Resources */,
+				871B07D21718BC91000CD420 /* 2Stars@2x.png in Resources */,
+				871B07D31718BC91000CD420 /* 3Stars.png in Resources */,
+				871B07D41718BC91000CD420 /* 3Stars@2x.png in Resources */,
+				871B07D51718BC91000CD420 /* 4Stars.png in Resources */,
+				871B07D61718BC91000CD420 /* 4Stars@2x.png in Resources */,
+				871B07D71718BC91000CD420 /* 5Stars@2x.png in Resources */,
+				871B07D81718BC91000CD420 /* 5Stars.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +306,8 @@
 				87B196551711CCD400B17373 /* Player.m in Sources */,
 				87B1966C1712F73100B17373 /* PlayerCell.m in Sources */,
 				87B1966F17131F8F00B17373 /* PlayerDetailsViewController.m in Sources */,
+				87B196721714CF7500B17373 /* GamePickerViewController.m in Sources */,
+				871B07C41718B7DB000CD420 /* RatePlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

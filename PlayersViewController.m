@@ -148,6 +148,26 @@
         PlayerDetailsViewController *playerDetailsViewController = [navigationController viewControllers][0];
         playerDetailsViewController.delegate = self;
     }
+    else if ([segue.identifier isEqualToString:@"EditPlayer"])
+    {
+        UINavigationController *navigationController = segue.destinationViewController;
+        PlayerDetailsViewController *playerDetailsViewController = [navigationController viewControllers][0];
+        playerDetailsViewController.delegate = self;
+//        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+       NSIndexPath *indexPath = sender;
+        Player *player = self.players[indexPath.row];
+        playerDetailsViewController.playerToEdit = player;
+    }
+    else if ([segue.identifier isEqualToString:@"RatePlayer"])
+    {
+        RatePlayerViewController *ratePlayerViewController = segue.destinationViewController;
+        ratePlayerViewController.delegate = self;
+        NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+        Player *player = self.players[indexPath.row];
+        ratePlayerViewController.player = player;
+    }
+else
+    NSLog(@"ERROR SHOULD NOT BE HERE in PREPARE FOR SEGUE");
 }
 
 #pragma mark - Table view delegate
@@ -162,7 +182,12 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:
+(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"EditPlayer"
+                              sender:indexPath];
+}
 
 #pragma mark - PlayerDetailsViewControllerDelegate
 -(void)playerDetailsViewControllerDidCancel : (PlayerDetailsViewController *) controller
@@ -176,5 +201,22 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:([self.players count] -1) inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath]  withRowAnimation:UITableViewRowAnimationAutomatic];
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)playerDetailsViewController : (PlayerDetailsViewController *) controller didEditPlayer:(Player *)player
+{
+    NSUInteger index = [self.players indexOfObject:player];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - RatePlayerViewControllerDelegate
+- (void)ratePlayerViewController: (RatePlayerViewController *)controller
+          didPickRatingForPlayer:(Player *)player
+{
+    NSUInteger index = [self.players indexOfObject:player];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index   inSection:0];
+    [self.tableView reloadRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 @end

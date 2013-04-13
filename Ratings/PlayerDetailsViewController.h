@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GamePickerViewController.h"
+
 @class Player;
 @class PlayerDetailsViewController;
 @protocol PlayerDetailsViewControllerDelegate <NSObject>
@@ -14,14 +16,16 @@
 -(void) playerDetailsViewControllerDidCancel:(PlayerDetailsViewController *) controller;
 //-(void) playerDetailsViewControllerDidSave:(PlayerDetailsViewController *) controller;
 -(void) playerDetailsViewController:(PlayerDetailsViewController *) controller didAddPlayer:(Player *)player;
-
+-(void) playerDetailsViewController:(PlayerDetailsViewController *) controller didEditPlayer:(Player *)player;
 @end
 
-@interface PlayerDetailsViewController : UITableViewController
+@interface PlayerDetailsViewController : UITableViewController <GamePickerViewControllerDelegate>
 @property (nonatomic,weak) id <PlayerDetailsViewControllerDelegate> delegate;
 -(IBAction)cancel:(id)sender;
 -(IBAction)done:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UILabel *detailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *Stupidname;
+@property (strong, nonatomic) Player *playerToEdit;
 
 @end
