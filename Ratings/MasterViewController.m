@@ -1,19 +1,18 @@
 //
-//  RankingViewController.m
+//  MasterViewController.m
 //  Ratings
 //
-//  Created by Michael Dodd on 4/13/13.
+//  Created by Michael Dodd on 4/14/13.
 //  Copyright (c) 2013 Michael Dodd. All rights reserved.
 //
 
-#import "RankingViewController.h"
-#import "Player.h"
+#import "MasterViewController.h"
 
-@interface RankingViewController ()
+@interface MasterViewController ()
 
 @end
 
-@implementation RankingViewController
+@implementation MasterViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -40,33 +39,36 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)done:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil]; }
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView: (UITableView *)tableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+#warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 0;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.rankedPlayers count];
+#warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    return 0;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil)
-        {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
-                                      reuseIdentifier:CellIdentifier];
-        }
-        Player *player = self.rankedPlayers[indexPath.row];
-        cell.textLabel.text = player.name; cell.detailTextLabel.text = player.game;
-        return cell;
-    }
-
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+- (BOOL)shouldAutorotateToInterfaceOrientation: (UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,23 +108,10 @@
 }
 */
 
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"RatePlayer"]) {
-        RatePlayerViewController *ratePlayerViewController = segue.destinationViewController;
-        ratePlayerViewController.delegate = self;
-        ratePlayerViewController.player = sender; }
-}
-
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    Player *player = self.rankedPlayers[indexPath.row]; [self performSegueWithIdentifier:@"RatePlayer"
-                                                                                  sender:player];
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -131,22 +120,5 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
-
-
-#pragma mark - RatePlayerViewControllerDelegate
-- (void)ratePlayerViewController: (RatePlayerViewController *)controller
-          didPickRatingForPlayer:(Player *)player
-{
-    NSLog (@"Inside ratePlayerViewController delegate for RankingViewController");
-    if (player.rating != self.requiredRating) {
-        NSUInteger index = [self.rankedPlayers indexOfObject:player];
-        [self.rankedPlayers removeObjectAtIndex:index];
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-        [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    [self.navigationController popViewControllerAnimated:YES];
-
-}
-
 
 @end

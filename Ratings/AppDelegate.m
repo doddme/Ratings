@@ -42,14 +42,21 @@
     
     [_players addObject:player];
 
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
+    {
+        UITabBarController *tabBarController =  (UITabBarController *)self.window.rootViewController;
+        UINavigationController *navigationController = [tabBarController viewControllers][0];
+        PlayersViewController  *playersViewController = [navigationController viewControllers][0];
+        playersViewController.players = _players;
     
-    UITabBarController *tabBarController =  (UITabBarController *)self.window.rootViewController;
-    UINavigationController *navigationController = [tabBarController viewControllers][0];
-    PlayersViewController  *playersViewController = [navigationController viewControllers][0];
-    playersViewController.players = _players;
-    
-    GesturesViewController *gesturesViewController = [tabBarController viewControllers][1];
-    gesturesViewController.players = _players;
+        GesturesViewController *gesturesViewController = [tabBarController viewControllers][1];
+        gesturesViewController.players = _players;
+    }
+    else
+    {
+        UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+        splitViewController.delegate = [splitViewController.viewControllers lastObject];
+    }
     
     return YES;
 }

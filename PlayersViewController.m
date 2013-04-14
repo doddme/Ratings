@@ -27,10 +27,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
- 
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -214,6 +212,7 @@ else
 - (void)ratePlayerViewController: (RatePlayerViewController *)controller
           didPickRatingForPlayer:(Player *)player
 {
+    NSLog (@"Inside ratePlayerViewController delegate for PlayersViewController");
     NSUInteger index = [self.players indexOfObject:player];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index   inSection:0];
     [self.tableView reloadRowsAtIndexPaths:@[indexPath]withRowAnimation:UITableViewRowAnimationAutomatic];

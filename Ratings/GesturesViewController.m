@@ -36,6 +36,7 @@
         rankingViewController.rankedPlayers =
         [self playersWithRating:5];
         rankingViewController.title = @"Best Players";
+            rankingViewController.requiredRating = 5;
         }
     else if ([segue.identifier isEqualToString:@"WorstPlayers"])
         {
@@ -44,6 +45,7 @@
         rankingViewController.rankedPlayers =
         [self playersWithRating:1];
         rankingViewController.title = @"Worst Players";
+            rankingViewController.requiredRating = 1;
         }
 }
 

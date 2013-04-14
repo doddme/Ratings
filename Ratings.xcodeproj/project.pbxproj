@@ -30,6 +30,10 @@
 		871B07D71718BC91000CD420 /* 5Stars@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CD1718BC91000CD420 /* 5Stars@2x.png */; };
 		871B07D81718BC91000CD420 /* 5Stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 871B07CE1718BC91000CD420 /* 5Stars.png */; };
 		871B07DB1719DA88000CD420 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B07DA1719DA88000CD420 /* RankingViewController.m */; };
+		871B07DE171A0D4D000CD420 /* SuperCoolSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B07DD171A0D4D000CD420 /* SuperCoolSegue.m */; };
+		871B07E1171A10D9000CD420 /* MainStoryboard~ipad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 871B07DF171A10D9000CD420 /* MainStoryboard~ipad.storyboard */; };
+		871B07E4171A2A88000CD420 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B07E3171A2A88000CD420 /* DetailViewController.m */; };
+		871B07E7171B18F1000CD420 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 871B07E6171B18F1000CD420 /* MasterViewController.m */; };
 		87B1964C1711AFB600B17373 /* Gestures.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B196481711AFB600B17373 /* Gestures.png */; };
 		87B1964D1711AFB600B17373 /* Gestures@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B196491711AFB600B17373 /* Gestures@2x.png */; };
 		87B1964E1711AFB600B17373 /* Players.png in Resources */ = {isa = PBXBuildFile; fileRef = 87B1964A1711AFB600B17373 /* Players.png */; };
@@ -82,6 +86,13 @@
 		871B07CE1718BC91000CD420 /* 5Stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5Stars.png; path = ../5Stars.png; sourceTree = "<group>"; };
 		871B07D91719DA88000CD420 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
 		871B07DA1719DA88000CD420 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
+		871B07DC171A0D4D000CD420 /* SuperCoolSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperCoolSegue.h; sourceTree = "<group>"; };
+		871B07DD171A0D4D000CD420 /* SuperCoolSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperCoolSegue.m; sourceTree = "<group>"; };
+		871B07E0171A10D9000CD420 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = "Ratings/en.lproj/MainStoryboard~ipad.storyboard"; sourceTree = "<group>"; };
+		871B07E2171A2A88000CD420 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		871B07E3171A2A88000CD420 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		871B07E5171B18F1000CD420 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		871B07E6171B18F1000CD420 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		87B196481711AFB600B17373 /* Gestures.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gestures.png; sourceTree = "<group>"; };
 		87B196491711AFB600B17373 /* Gestures@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Gestures@2x.png"; sourceTree = "<group>"; };
 		87B1964A1711AFB600B17373 /* Players.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Players.png; sourceTree = "<group>"; };
@@ -164,7 +175,14 @@
 				87B1966B1712F73100B17373 /* PlayerCell.m */,
 				87129DC21710C91000E2750E /* AppDelegate.h */,
 				87129DC31710C91000E2750E /* AppDelegate.m */,
+				871B07DC171A0D4D000CD420 /* SuperCoolSegue.h */,
+				871B07DD171A0D4D000CD420 /* SuperCoolSegue.m */,
 				87129DCB1710C91000E2750E /* MainStoryboard.storyboard */,
+				871B07DF171A10D9000CD420 /* MainStoryboard~ipad.storyboard */,
+				871B07E5171B18F1000CD420 /* MasterViewController.h */,
+				871B07E6171B18F1000CD420 /* MasterViewController.m */,
+				871B07E2171A2A88000CD420 /* DetailViewController.h */,
+				871B07E3171A2A88000CD420 /* DetailViewController.m */,
 				87B1966D17131F8F00B17373 /* PlayerDetailsViewController.h */,
 				87B1966E17131F8F00B17373 /* PlayerDetailsViewController.m */,
 				871B07D91719DA88000CD420 /* RankingViewController.h */,
@@ -294,6 +312,7 @@
 				871B07D61718BC91000CD420 /* 4Stars@2x.png in Resources */,
 				871B07D71718BC91000CD420 /* 5Stars@2x.png in Resources */,
 				871B07D81718BC91000CD420 /* 5Stars.png in Resources */,
+				871B07E1171A10D9000CD420 /* MainStoryboard~ipad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +333,9 @@
 				87B196721714CF7500B17373 /* GamePickerViewController.m in Sources */,
 				871B07C41718B7DB000CD420 /* RatePlayerViewController.m in Sources */,
 				871B07DB1719DA88000CD420 /* RankingViewController.m in Sources */,
+				871B07DE171A0D4D000CD420 /* SuperCoolSegue.m in Sources */,
+				871B07E4171A2A88000CD420 /* DetailViewController.m in Sources */,
+				871B07E7171B18F1000CD420 /* MasterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +356,15 @@
 				87129DCC1710C91000E2750E /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		871B07DF171A10D9000CD420 /* MainStoryboard~ipad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				871B07E0171A10D9000CD420 /* en */,
+			);
+			name = "MainStoryboard~ipad.storyboard";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,8 +432,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ratings/Ratings-Prefix.pch";
 				INFOPLIST_FILE = "Ratings/Ratings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -413,8 +445,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ratings/Ratings-Prefix.pch";
 				INFOPLIST_FILE = "Ratings/Ratings-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
